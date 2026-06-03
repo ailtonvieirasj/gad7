@@ -224,6 +224,38 @@
       color: #888;
       text-align: right;
     }
+
+    .period-banner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff3e0;
+      border: 2px solid #fb8c00;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 28px;
+    }
+    .period-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .period-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .period-text strong {
+      font-size: 1.05rem;
+      color: #e65100;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+    .period-text span {
+      font-size: 0.88rem;
+      color: #795548;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -233,13 +265,20 @@
     <p>Questionário clínico validado internacionalmente para identificar e medir a gravidade dos sintomas de ansiedade generalizada.</p>
   </div>
   <div class="intro">
-    <strong>Nas últimas 2 semanas</strong>, com que frequência você tem sido incomodado pelos seguintes sintomas?
+    Questionário de triagem clínica — responda com sinceridade para obter um resultado preciso.
   </div>
   <div class="privacy-notice">
     <span class="privacy-icon">🔒</span>
     <span>Este teste é <strong>100% anônimo</strong>. Suas respostas <strong>não são coletadas, armazenadas ou enviadas</strong> a nenhum servidor — tudo acontece localmente no seu navegador.</span>
   </div>
   <div class="form-body">
+    <div class="period-banner">
+      <div class="period-icon">🗓️</div>
+      <div class="period-text">
+        <strong>Considere as últimas 2 semanas</strong>
+        <span>Com que frequência você foi incomodado pelos sintomas abaixo?</span>
+      </div>
+    </div>
     <form id="gad7Form">
 
       <div class="question-block">
@@ -427,3 +466,4 @@
 </script>
 </body>
 </html>
+
