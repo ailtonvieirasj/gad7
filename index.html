@@ -44,6 +44,22 @@
       color: #555;
       line-height: 1.6;
     }
+    .privacy-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #e8f5e9;
+      border-left: 4px solid #43a047;
+      padding: 12px 40px;
+      font-size: 0.88rem;
+      color: #2e7d32;
+      line-height: 1.5;
+    }
+    .privacy-notice .privacy-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
     .form-body {
       padding: 30px 40px;
     }
@@ -77,7 +93,7 @@
     }
     @media (max-width: 520px) {
       .options { grid-template-columns: 1fr; }
-      .header, .form-body, .intro { padding-left: 20px; padding-right: 20px; }
+      .header, .form-body, .intro, .privacy-notice { padding-left: 20px; padding-right: 20px; }
     }
     .option-label {
       display: flex;
@@ -208,26 +224,6 @@
       color: #888;
       text-align: right;
     }
-  
-    .privacy-notice {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      background: #e8f5e9;
-      border-left: 4px solid #43a047;
-      padding: 12px 40px;
-      font-size: 0.88rem;
-      color: #2e7d32;
-      line-height: 1.5;
-    }
-    .privacy-notice .privacy-icon {
-      font-size: 1rem;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    @media (max-width: 520px) {
-      .privacy-notice { padding-left: 20px; padding-right: 20px; }
-    }
   </style>
 </head>
 <body>
@@ -355,7 +351,6 @@
 </div>
 
 <script>
-  // Highlight selected options
   document.querySelectorAll('.options').forEach(function(optGroup) {
     optGroup.querySelectorAll('input[type="radio"]').forEach(function(radio) {
       radio.addEventListener('change', function() {
@@ -404,7 +399,6 @@
     document.getElementById('resultHeader').style.background = color;
     document.getElementById('resultDescription').textContent = desc;
 
-    // Highlight scale row
     document.querySelectorAll('.scale-table tr').forEach(function(row) {
       row.classList.remove('active');
     });
